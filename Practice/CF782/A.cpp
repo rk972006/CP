@@ -25,5 +25,26 @@ int main(){
    freopen("output.txt" , "w", stdout);
 #endif
 
+   int t;
+   cin>>t;
+   while(t--){
+      int n , r, b;
+      cin>>n>>r>>b;
+      vector<string> v(b+1 , "");
+      ll k = 0;
+      while(r--){
+         v[k%(b+1)] += "R";
+         k++;
+      }
+      string ans = "";
+      for(int i =0 ; i<=b;i++){
+         ans+=v[i];
+         if(i<b){
+            ans+="B";
+         }
+         
+   }
+   cout<<ans<<endl; 
+}
  return 0;
 }  
